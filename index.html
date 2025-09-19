@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Drill 1 </title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .calculator {
+        background: #fff;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 300px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    p {
+        margin: 10px 0 5px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    button {
+        background: #4facfe;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    button:hover {
+        background: #00c6ff;
+    }
+
+    #average, #result {
+        font-weight: bold;
+        color: #222;
+    }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Simple Average Calculator</h2>
+        <p>Score 1:</p>
+        <input id="score1" type="text">
+        <p>Score 2:</p>
+        <input id="score2" type="text">
+
+        <button py-click="compute_average">COMPUTE</button>
+
+        <p>Average: <span id="average"></span></p>
+        <p>Passed?<span id="result"></span></p>
+    </div>
+    
+    <script type="py" src="main.py"></script>
+</body>
+</html>
